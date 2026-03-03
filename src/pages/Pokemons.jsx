@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { PokemonContext } from "../Context/PokemonContext";
 import PokemonCard from "./PokemonCard";
 import PokemonBattle from "../components/PokemonBattle";
 import "./Pokemons.css";

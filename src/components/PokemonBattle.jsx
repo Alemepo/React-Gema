@@ -38,13 +38,6 @@ const PokemonBattle = ({ pokemon1, pokemon2, onNewRound, registerAction }) => {
     return () => registerAction(null, null);
   }, [registerAction, pokemon1, pokemon2, hits1, hits2, winner]);
 
-  const reset = () => {
-    setHits1(0);
-    setHits2(0);
-    setWinner(null);
-    if (onNewRound) onNewRound();
-  };
-
   if (winner) {
     return <Ganador pokemon={winner} />;
   }
@@ -55,8 +48,6 @@ const PokemonBattle = ({ pokemon1, pokemon2, onNewRound, registerAction }) => {
         <PokemonCard pokemon={pokemon1} />
         <PokemonCard pokemon={pokemon2} />
       </div>
-
-
 
       <div className="status">
         <p>{pokemon1.name}: {hits1} golpes</p>

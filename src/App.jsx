@@ -1,4 +1,5 @@
 import './App.css'
+import { PokemonProvider } from "./Context/PokemonContext";
 import Home from './pages/Home'
 import Pokemons from './pages/Pokemons'
 import React, { useState } from 'react'
@@ -13,10 +14,10 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <PokemonProvider>
         <Home actionLabel={actionLabel} actionHandler={actionHandler} />
         <Pokemons registerAction={registerAction} />
-    </React.Fragment>
+    </PokemonProvider>
   )
 }
 

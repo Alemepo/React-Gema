@@ -9,6 +9,4 @@ const ActionButton = ({ label, onClick, disabled }) => {
   )
 }
 
-//Hola
-
 export default ActionButton

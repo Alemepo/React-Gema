@@ -38,7 +38,7 @@ const Home = ({ actionLabel, actionHandler }) => {
     <div className='main-container'>
         <h2>Welcome to the coin game</h2>
         <img src={coinImage} alt="" />
-        <ActionButton label={actionLabel || "Flip"} onClick={handleActionClick} />
+        <ActionButton label={actionLabel || "Atacar"} onClick={handleActionClick} />
         {lastAction && (
           <h4>{lastAction.attacker} ha golpeado</h4>
         )}
