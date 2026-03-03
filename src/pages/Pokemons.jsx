@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { PokemonContext } from "../Context/PokemonContext";
 import PokemonCard from "./PokemonCard";
 import PokemonBattle from "../components/PokemonBattle";
@@ -6,10 +6,10 @@ import "./Pokemons.css";
 
 const Pokemons = ({ registerAction }) => {
 
-  const [pokemon1, setPokemon1] = useState(null);
-  const [pokemon2, setPokemon2] = useState(null);
+  const { pokemon1, setPokemon1, pokemon2, setPokemon2 } = useContext(PokemonContext);
 
   useEffect(() => {
+    if (pokemon1 && pokemon2) return
 
     fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
       .then((response) => response.json())
@@ -40,7 +40,7 @@ const Pokemons = ({ registerAction }) => {
       })
       .catch((error) => console.error("Error:", error));
 
-  }, []);
+  }, [pokemon1, pokemon2, setPokemon1, setPokemon2]);
 
   return (
     <div className="pokemons-container">

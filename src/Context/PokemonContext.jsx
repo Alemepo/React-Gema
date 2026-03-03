@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-export const PokemonContext = createContext();
+export const PokemonContext = createContext(null);
 
 export function PokemonProvider({ children }) {
   const [pokemon1, setPokemon1] = useState(null);
