@@ -44,7 +44,7 @@ const Pokemons = ({ registerAction }) => {
 
   return (
     <div className="pokemons-container">
-      {pokemon1 && pokemon2 ? (
+      {pokemon1 && pokemon2 && (
         <PokemonBattle
           pokemon1={pokemon1}
           pokemon2={pokemon2}
@@ -54,8 +54,6 @@ const Pokemons = ({ registerAction }) => {
           }}
           registerAction={registerAction}
         />
-      ) : (
-        pokemon1 && <PokemonCard pokemon={pokemon1} />
       )}
     </div>
   );

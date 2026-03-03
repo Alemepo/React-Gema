@@ -1,4 +1,3 @@
-import React from "react";
 import './PokemonCard.css'
 
 const PokemonCard = ({ pokemon }) => {
