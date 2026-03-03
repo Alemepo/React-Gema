@@ -1,0 +1,31 @@
+.battle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.battle-container.dark {
+  background-color: #222;
+  color: #eee;
+}
+
+.battle-container.light {
+  background-color: #fafafa;
+  color: #111;
+}
+
+.fighters {
+  display: flex;
+  gap: 40px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.status p {
+  margin: 4px 0;
+}
