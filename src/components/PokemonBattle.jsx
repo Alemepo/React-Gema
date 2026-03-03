@@ -3,7 +3,7 @@ import PokemonCard from "../pages/PokemonCard";
 import "./PokemonBattle.css"; // estilos propios para la batalla
 import Ganador from '../compGanador/Ganador.jsx';
 
-const PokemonBattle = ({ pokemon1, pokemon2, onNewRound, registerAction }) => {
+const PokemonBattle = ({ pokemon1, pokemon2, registerAction }) => {
   const [hits1, setHits1] = useState(0);
   const [hits2, setHits2] = useState(0);
   const [winner, setWinner] = useState(null);
